@@ -12,6 +12,7 @@ Requires:       mpv-libs, qt6-qtbase, qt6-qtdeclarative, qt6-qtwebsockets, qt6-q
 Requires:       libxkbcommon, qt6-qtquickcontrols2
 BuildArch:      x86_64
 
+%global __requires_exclude ^libQt6.*\\(Qt_.*_PRIVATE_API\\)\\(64bit\\)$
 %global debug_package %{nil}
 
 %description
