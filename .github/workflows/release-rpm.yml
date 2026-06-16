@@ -2,7 +2,7 @@ name: Fedora package build
 
 on:
   push:
-    branches: [master]
+    branches: [feat/rpm]
 
 jobs:
   fedoraPackageBuild:
@@ -35,7 +35,7 @@ jobs:
         cp src/build/AniLiberty /github/home/rpmbuild/SOURCES/aniliberty-2.2.36/usr/usr/local/bin/aniliberty
         cd /github/home/rpmbuild/SOURCES
         tar -czf aniliberty-2.2.36.tar.gz aniliberty-2.2.36/
-        
+
     - name: Build RPM package
       run: |
         cd /github/home/rpmbuild/SPECS/
